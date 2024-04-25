@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <title>Dashboard</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link href="assets/css/bootstrap.v5.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/form-outline.css" rel="stylesheet">
+  <link href="assets/css/responsive.css" rel="stylesheet">
+</head>
+<style>
+    .pre-temp{
+        float: right;
+    background-color: #C584FE;
+    }
+</style>
+<body>
+  <!--Header start-->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="d-flex align-items-center justify-content-between">
+      <img
+        src="assets/images/digi-card-logo.png"
+        alt=""
+        class="logo-img"
+        width="100%"
+      /><i class="toggle-sidebar-btn pe-2">
+        <img src="assets/images/humburger.png" class="humburger" alt=""
+      /></i>
+    </div>
+    <nav class="header-nav ms-auto">
+    
+      <div class="header-right-content" >
+        <!-- <div>
+          <img src="assets/images/lock.png" class="lock-img" alt="" />
+        </div> -->
+        <div>
+          <a
+          class="nav-link text-white small p-0"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+          ><img src="assets/images/user1.png" class="user-img" alt="" /></a
+        >
+        <ul
+          class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile"
+        >
+          <li>
+            <a
+              class="dropdown-item d-flex align-items-center"
+              href="login.html"
+              ><i class="fa fa-sign-out"></i> <span>Logout</span></a
+            >
+          </li>
+        </ul>
+          
+        </div>
+        <div>
+          <p class="user-paragraph"><b>Pawas Goyal</b></p>
+          <p class="user-paragraph">16 Jan 2024</p>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!--Header end-->
+  <!--artical start-->
+  <!--Sidebar start-->
+  <!--left panel start-->
+  <aside id="sidebar" class="sidebar">
+    <ul class="sidebar-nav" id="sidebar-nav">
+        <!-- <li class="nav-item">
+            <a class="nav-link" href="index.html"><img src="/assets/images/home.png" alt="">
+                <span class="nav-head">Home</span></a>
+        </li> -->
+        <li class="nav-item">
+            <a class="nav-link" href="manage_card.html"><img src="/assets/images/manage-user.png" alt=""> <span class="nav-head">Manage
+                    Card</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="theme.html"><img src="/assets/images/theme1.png" alt=""> <span class="nav-head">Theme</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="change_password.html"><img src="/assets/images/change-password.png" alt=""> <span class="nav-head">Change
+                    Password</span></a>
+        </li>
+    </ul>
+</aside>
+  <!--left panel end-->
+  <!--Sidebar end-->
+  <!--Main start-->
+  <main id="main" class="main">
+    <section class="section">
+        <h4>Theme</h4>
+      <!--Table code start-->
+      <div class="card">
+        <div class="card-body">
+         <div class="mt-2" style="overflow-x:auto;">
+          <table class="table w-100 border">
+            <thead style="background: #C584FE; color: #ffffff;">
+              <tr>
+                <th scope="col">Sr. No</th>
+                <th scope="col">Title</th>
+                <th scope="col">Preview</th>
+                <th scope="col">Template type</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Software Developer</td>
+                <td><div id="myModal1" class="modal1">
+                  <span class="close1">&times;</span>
+                  <img class="modal-content1" id="img01" />
+                  <div id="caption"></div>
+                </div>
+                  <img src="assets/images/pre1.png" alt="" id="myImg"
+                  src="assets/images/img1.png"
+                  alt="Snow"></td>
+                <td>Free Template</td>
+                <td><div class="dropdown">
+                  <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" >
+                    <i class=""></i>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">Set this template</a></li>
+                    <li><a class="dropdown-item" href="theme_preview.html">Edit</a></li>
+                    <li class="dropdown-item">Delete</li>
+                  </ul>
+                </div>
+              </td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Web Developer</td>
+                <td><img src="assets/images/pre2.png" alt=""></td>
+                <td>Free Template</td>
+                <td><div class="dropdown">
+                  <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" >
+                    <i class=""></i>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">Set this template</a></li>
+                    <li><a class="dropdown-item" href="theme_preview.html">Edit</a></li>
+                    <li class="dropdown-item">Delete</li>
+                  </ul>
+                </div></td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>QA Tester</td>
+                <td><img src="assets/images/pre3.png" alt=""></td>
+                <td><img src="assets/images/king.png" alt=""> Cylsys Template</td>
+                <td><div class="dropdown">
+                  <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" >
+                    <i class=""></i>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">Set this template</a></li>
+                    <li><a class="dropdown-item" href="theme_preview.html">Edit</a></li>
+                    <li class="dropdown-item">Delete</li>
+                  </ul>
+                </div></td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>DevOps</td>
+                <td><img src="assets/images/pre4.png" alt=""></td>
+                <td><img src="assets/images/king.png" alt=""> Cylsys Template</td>
+                <td><div class="dropdown">
+                  <button class="bi-file-arrow-down btn btn-primary dropdown-toggle" type="button"
+                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" >
+                    <i class=""></i>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">Set this template</a></li>
+                    <li><a class="dropdown-item" href="theme_preview.html">Edit</a></li>
+                    <li class="dropdown-item">Delete</li>
+                  </ul>
+                </div>
+              </td>
+              </tr>
+           
+            </tbody>
+          </table>
+         </div>
+        </div>
+      </div>
+      <!--Table code end-->
+    </section>
+
+
+  </main>
+  <!--Main end-->
+  <!--artical end-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/cy.js"></script>
+  <script src="assets/js/newscript.js"></script>
+
+  <script>
+    // Get the modal
+    var modal = document.getElementById("myModal1");
+
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var img = document.getElementById("myImg");
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    img.onclick = function () {
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt;
+    };
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close1")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+      modal.style.display = "none";
+    };
+  </script>
+</body>
+
+</html>

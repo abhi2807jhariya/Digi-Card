@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <title>Dashboard</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link href="assets/css/bootstrap.v5.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/form-outline.css" rel="stylesheet">
+  <link href="assets/css/responsive.css" rel="stylesheet">
+</head>
+<style>
+    .pre-temp{
+        float: right;
+    background-color: #C584FE;
+    }
+</style>
+<body>
+  <!--Header start-->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="d-flex align-items-center justify-content-between">
+      <img
+        src="assets/images/digi-card-logo.png"
+        alt=""
+        class="logo-img"
+        width="100%"
+      /><i class="toggle-sidebar-btn pe-2">
+        <img src="assets/images/humburger.png" class="humburger" alt=""
+      /></i>
+    </div>
+    <nav class="header-nav ms-auto">
+    
+      <div class="header-right-content" >
+        <!-- <div>
+          <img src="assets/images/lock.png" class="lock-img" alt="" />
+        </div> -->
+        <div>
+          <a
+          class="nav-link text-white small p-0"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+          ><img src="assets/images/user1.png" class="user-img" alt="" /></a
+        >
+        <ul
+          class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile"
+        >
+          <li>
+            <a
+              class="dropdown-item d-flex align-items-center"
+              href="login.html"
+              ><i class="fa fa-sign-out"></i> <span>Logout</span></a
+            >
+          </li>
+        </ul>
+          
+        </div>
+        <div>
+          <p class="user-paragraph"><b>Pawas Goyal</b></p>
+          <p class="user-paragraph">16 Jan 2024</p>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!--Header end-->
+  <!--artical start-->
+  <!--Sidebar start-->
+  <!--left panel start-->
+  <aside id="sidebar" class="sidebar">
+    <ul class="sidebar-nav" id="sidebar-nav">
+        <!-- <li class="nav-item">
+            <a class="nav-link" href="index.html"><img src="/assets/images/home.png" alt="">
+                <span class="nav-head">Home</span></a>
+        </li> -->
+        <li class="nav-item">
+            <a class="nav-link" href="manage_card.html"><img src="/assets/images/manage-user.png" alt=""> <span class="nav-head">Manage
+                    Card</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="theme.html"><img src="/assets/images/theme1.png" alt=""> <span class="nav-head">Theme</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="change_password.html"><img src="/assets/images/change-password.png" alt=""> <span class="nav-head">Change
+                    Password</span></a>
+        </li>
+    </ul>
+</aside>
+  <!--left panel end-->
+  <!--Sidebar end-->
+  <!--Main start-->
+  <main id="main" class="main">
+    <section class="section">
+        <!--Table code start-->
+        <div class="card">
+          <div class="card-body p-0">
+            <div class="head text-center p-3 text-white" style="background-color: #a744ff;">
+              <div class="d-flex justify-content-center">
+                <h4>Add Details</h4>
+              </div>
+            </div>
+            <div class="row p-4">
+             
+              <div class="col-md-4">
+                <label for="contact">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="contact"
+                  placeholder="Enter Name"
+                />
+              </div>
+              <div class="col-md-4">
+                <label for="email">Email ID</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Enter Email"
+                />
+              </div>
+              <div class="col-md-4">
+                  <label for="cat">Title</label>
+                  <input
+                  type="email"
+                  class="form-control"
+                  id="cat"
+                  placeholder="Enter Email"
+                />
+                </div>
+          
+            </div>
+          
+          <div class="text-center p-2">
+            <a href="#"><button
+              class="btn text-white"
+              style="background-color: #c584fe" 
+            >Cancel</button></a>
+            <a href="manage_card.html"><button
+              class="btn text-white"
+              style="background-color: #c584fe" 
+            >Save</button></a>
+        
+          </div>
+           
+            </div>
+          </div>
+        </div>
+        <!--Table code end-->
+      </section>
+
+
+  </main>
+  <!--Main end-->
+  <!--artical end-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/cy.js"></script>
+  <script src="assets/js/newscript.js"></script>
+
+  
+</body>
+
+</html>

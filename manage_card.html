@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <title>Dashboard</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+    <link href="assets/css/bootstrap.v5.min.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/css/main.css" rel="stylesheet" />
+    <link href="assets/css/form-outline.css" rel="stylesheet" />
+    <link href="assets/css/responsive.css" rel="stylesheet" />
+  </head>
+  <style>
+    .active1,
+    .btn:hover {
+      background-color: #c178ff;
+      color: white;
+    }
+  </style>
+  <body>
+    <!--Header start-->
+    <header id="header" class="header fixed-top d-flex align-items-center">
+      <div class="d-flex align-items-center justify-content-between">
+        <img
+          src="assets/images/digi-card-logo.png"
+          alt=""
+          class="logo-img"
+          width="100%"
+        /><i class="toggle-sidebar-btn pe-2">
+          <img src="assets/images/humburger.png" class="humburger" alt=""
+        /></i>
+      </div>
+      <nav class="header-nav ms-auto">
+      
+        <div class="header-right-content" >
+          <!-- <div>
+            <img src="assets/images/lock.png" class="lock-img" alt="" />
+          </div> -->
+          <div>
+            <a
+            class="nav-link text-white small p-0"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            ><img src="assets/images/user1.png" class="user-img" alt="" /></a
+          >
+          <ul
+            class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile"
+          >
+            <li>
+              <a
+                class="dropdown-item d-flex align-items-center"
+                href="login.html"
+                ><i class="fa fa-sign-out"></i> <span>Logout</span></a
+              >
+            </li>
+          </ul>
+            
+          </div>
+          <div>
+            <p class="user-paragraph"><b>Pawas Goyal</b></p>
+            <p class="user-paragraph">16 Jan 2024</p>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!--Header end-->
+    <!--artical start-->
+    <!--Sidebar start-->
+    <!--left panel start-->
+    <aside id="sidebar" class="sidebar">
+      <ul class="sidebar-nav" id="sidebar-nav">
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="index.html"
+            ><img src="/assets/images/home.png" alt="" />
+            <span class="nav-head">Home</span></a
+          >
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link active" href="manage_card.html"
+            ><img src="/assets/images/manage-user1.png" alt="" />
+            <span class="nav-head">Manage Card</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="theme.html"
+            ><img src="/assets/images/theme.png" alt="" />
+            <span class="nav-head">Theme</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="change_password.html"
+            ><img src="/assets/images/change-password.png" alt="" />
+            <span class="nav-head">Change Password</span></a
+          >
+        </li>
+      </ul>
+    </aside>
+    <!--left panel end-->
+    <!--Sidebar end-->
+    <!--Main start-->
+    <main id="main" class="main">
+      <section class="section">
+        <h4>Manage Card</h4>
+        <!--Table code start-->
+        <div class="card">
+          <div class="card-body">
+            <div class="w-100" style="display: inline-block">
+              <div id="myDIV">
+                <button class="btn active1" onclick="myCard()">My Card</button>
+                <button class="btn" onclick="manageDetails()">
+                  Manage Details
+                </button>
+                <button
+                  class="border text-white rounded p-2" id="openModalBtn"
+                  style="float: right; background-color: #c584fe"
+                >
+                  Add Bulk Details <i class="fa fa-plus"></i>
+                </button>
+                <a href="add_details.html"  class="border text-white rounded p-2"
+                style="float: right; background-color: #c584fe">
+                  
+                  Add Details <i class="fa fa-plus"></i>
+              
+                </a>
+                <div id="myModal" class="modal">
+                  <div class="modal-content">
+                    <div class="model-head"><b>Add Bulk Upload</b> <span class="close" id="closeModalBtn">&times;</span></div>
+                    
+                   <div class="model-data">
+                    <div class="">
+                      <input type="file" class="form-control">&nbsp;<br>
+                      <a href="#" class="btn border">Upload</a>
+                      <a href="Manage_details.xlsx" class="btn border">Download Teplate file</a>
+                    </div>
+                   </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br /><br />
+            <div class="container" id="my-card">
+              <div class="row justify-content-center">
+                <div class="col-md-5 col-12">
+                  <div class="card text-center">
+                    <div class="card-body p-0">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <img
+                            src="assets/images/avatarBig.svg"
+                            alt=""
+                            class="w-100"
+                          />
+                        </div>
+                        <div class="col-md-12 my-4">
+                          <div
+                            class="ms-3"
+                            style="border-left: 4px dotted #404a5e"
+                          >
+                            <div class="d-flex">
+                              <div class="flex-grow-1 ms-3 text-start">
+                                <h5 class="m-0 fw-semibold">Pawas Goyal</h5>
+                                <p class="m-0 my-2">Director</p>
+                              </div>
+                              <div class="flex-shrink-0">
+                                <img
+                                  src="assets/images/cylsys.png"
+                                  alt="..."
+                                  class="w-75"
+                                />
+                              </div>
+                            </div>
+                            <p class="m-0 text-start ms-3">
+                              Cylsys Software Solutions Pvt. Ltd.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <p class="text-start ms-3 pe-5">
+                            Guiding Digital Excellence: Strategy, Innovation
+                            Results – Your Success, Our Passion, Your Tomorrow,
+                            Unlocked Today."
+                          </p>
+                        </div>
+
+                        <div class="d-flex">
+                          <div class="flex-grow-1 ms-3 text-start">
+                            <ul class="ms-3 list-unstyled text-start">
+                              <li class="py-3">
+                                <img
+                                  src="assets/images/mobile.svg"
+                                  alt=""
+                                  class="me-4"
+                                />+91 9967502429
+                              </li>
+                              <li class="py-3">
+                                <img
+                                  src="assets/images/email.svg"
+                                  alt=""
+                                  class="me-4"
+                                />Pawas.goyal@cylsys.com
+                              </li>
+                              <li class="py-3">
+                                <img
+                                  src="assets/images/location.svg"
+                                  alt=""
+                                  class="me-4"
+                                />Mumbai, Maharashtra
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="flex-shrink-0">
+                            <img
+                              src="assets/images/share.png"
+                              alt="..."
+                              class="share-img mt-5"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="manage-card" style="display: none; overflow-x: auto">
+              <table class="table w-100 border">
+                <thead style="background: #c584fe; color: #ffffff">
+                  <tr>
+                    <th scope="col">Sr. No</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email Id</th>
+                    <th scope="col">Title</th>
+                    <!-- <th scope="col">Preview</th> -->
+                    <th scope="col">Action</th>
+                    <!-- <th scope="col">Edit</th> -->
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Abhishek Jhariya</td>
+                    <td>abhi123@gmail.com</td>
+                    <td>Card1</td>
+                    <!-- <td><img src="assets/images/pre1.png" alt="" /></td> -->
+                    <td>
+                      <div class="d-flex">
+                        <div>
+                          <label class="switch">
+                            <input type="checkbox" checked />
+                            <span class="slider round"></span>
+                          </label>
+                        </div>
+                        <img
+                        src="assets/images/edit.png"
+                        alt=""
+                      />
+                      <img src="assets/images/delete.png" alt="" />
+                      <!-- Default checked -->
+                      
+                       </div>
+                    </td>
+                    <!-- <td></td> -->
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Aakanksha Gupta</td>
+                    <td>akku@gmail.com</td>
+                    <td>Card2</td>
+                    <td>
+                      <div class="d-flex">
+                        <div>
+                          <label class="switch">
+                            <input type="checkbox" checked />
+                            <span class="slider round"></span>
+                          </label>
+                        </div>
+                        <img
+                        src="assets/images/edit.png"
+                        alt=""
+                      />
+                      <img src="assets/images/delete.png" alt="" />
+                      <!-- Default checked -->
+                      
+                       </div>
+                    </td>
+                    <!-- 
+                    <td><img src="assets/images/pre2.png" alt="" /></td>
+                    <td><img src="assets/images/action.png" alt=""></td>
+                    <td><img src="assets/images/edit.png" alt=""> <img src="assets/images/delete.png" alt=""></td> -->
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Pawas Goyal</td>
+                    <td>pawasgoyal@gmail.com</td>
+                    <td>Card3</td>
+                    <td>
+                      <div class="d-flex">
+                        <div>
+                          <label class="switch">
+                            <input type="checkbox" checked />
+                            <span class="slider round"></span>
+                          </label>
+                        </div>
+                        <img
+                        src="assets/images/edit.png"
+                        alt=""
+                      />
+                      <img src="assets/images/delete.png" alt="" />
+                      <!-- Default checked -->
+                      
+                       </div>
+                    </td>
+
+                    <!-- <td><img src="assets/images/pre3.png" alt="" /></td>
+                    <td><img src="assets/images/action.png" alt=""></td>
+                    <td><img src="assets/images/edit.png" alt=""> <img src="assets/images/delete.png" alt=""></td> -->
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>Hitesh Shrivastava</td>
+                    <td>hiteshshri@gmail.com</td>
+                    <td>Card4</td>
+                    <td>
+                     <div class="d-flex">
+                      <div>
+                        <label class="switch">
+                          <input type="checkbox" checked />
+                          <span class="slider round"></span>
+                        </label>
+                      </div>
+                      <img
+                      src="assets/images/edit.png"
+                      alt=""
+                    />
+                    <img src="assets/images/delete.png" alt="" />
+                    <!-- Default checked -->
+                    
+                     </div>
+                    </td>
+
+                    <!-- <td><img src="assets/images/pre4.png" alt="" /></td>
+                    <td><img src="assets/images/action.png" alt=""></td>
+                    <td><img src="assets/images/edit.png" alt=""> <img src="assets/images/delete.png" alt=""></td> -->
+                  </tr>
+                </tbody>
+              </table>
+              <p class="float-end">Total record 120</p>
+            </div>
+          </div>
+        </div>
+        <!--Table code end-->
+      </section>
+    </main>
+    <!--Main end-->
+    <!--artical end-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/cy.js"></script>
+    <script src="assets/js/newscript.js"></script>
+
+    <script>
+      function myCard() {
+        document.getElementById("my-card").style.display = "block";
+        document.getElementById("manage-card").style.display = "none";
+      }
+      function manageDetails() {
+        document.getElementById("my-card").style.display = "none";
+        document.getElementById("manage-card").style.display = "block";
+      }
+
+      var header = document.getElementById("myDIV");
+      var btns = header.getElementsByClassName("btn");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function () {
+          var current = document.getElementsByClassName("active1");
+          current[0].className = current[0].className.replace(" active1", "");
+          this.className += " active1";
+        });
+      }
+    </script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+var openModalBtn = document.getElementById('openModalBtn');
+var closeModalBtn = document.getElementById('closeModalBtn');
+var modal = document.getElementById('myModal');
+
+openModalBtn.addEventListener('click', function () {
+  modal.style.display = 'block';
+});
+
+closeModalBtn.addEventListener('click', function () {
+  modal.style.display = 'none';
+});
+
+window.addEventListener('click', function (event) {
+  if (event.target == modal) {
+    modal.style.display = 'none';
+  }
+});
+});
+
+</script>
+  </body>
+</html>

@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="assets/css/bootstrap.v5.min.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <title>Login - Digi Card</title>
+
+    <style>
+      :root,
+      [data-bs-theme="light"] {
+        --color-white: #ffffff;
+        --color-red: #ff0000;
+        --color-border: #ffffff33;
+        --color-blue: #135492;
+        --color-blue_transparent: #1354926e;
+      }
+
+      body {
+        font-family: Markazi Text;
+        background-image: url(assets/images/Login.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .login {
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        color: var(--color-white);
+      }
+
+      .login h1 {
+        font-size: 80px;
+        font-weight: 700;
+        line-height: 75px;
+        letter-spacing: 0em;
+        text-align: left;
+      }
+
+      .login h2 {
+        /* font-size: 40px;
+        font-weight: 400;
+        line-height: 50px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: var(--color-white);
+        -webkit-text-fill-color: transparent; 
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: var(--color-white); */
+        text-shadow: 1px 0px 0px rgb(255, 255, 255),
+          -1px 0px 0px rgb(255, 255, 255), 0px 1px 0px rgb(255, 255, 255),
+          0px -1px 0px rgb(255, 255, 255);
+        color: #b26ce8;
+        font-size: 40px;
+      }
+
+      .login p {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 40px;
+        letter-spacing: 0em;
+        text-align: left;
+      }
+      /* login right css */
+
+      .form_card .card {
+        border: 1px solid var(--color-border);
+      }
+      .form_card .card,
+      .form_card .card-body {
+        background-color: transparent;
+      }
+
+      .form_card .card-header {
+        border: 0;
+        text-align: center;
+        padding: 20px 0 0;
+      }
+
+      .form_card label {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0.01em;
+        text-align: left;
+        color: var(--color-white);
+      }
+
+      #emailHelp {
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 15px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: var(--color-white);
+      }
+      #passwordHelp {
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 18px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: var(--color-red);
+      }
+      .form_card .form-control,
+      .demo_request_form .form-control {
+        background-color: transparent;
+        box-shadow: none;
+        outline: none;
+        color: var(--color-white);
+      }
+
+      .forget_password {
+        padding: 20px 0;
+      }
+
+      .forget_password p {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0.01em;
+        text-align: center;
+        color: var(--color-white);
+        margin: 0;
+      }
+
+      .forget_password a {
+        color: #ffffff;
+        text-decoration: none;
+      }
+
+      ::placeholder {
+        color: var(--color-white);
+      }
+
+      .requestBtn {
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 25px;
+        letter-spacing: 0em;
+        text-align: left;
+        width: 50%;
+        text-align: center;
+      }
+
+      .loginBtn {
+        font-family: "Poppins";
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 27px;
+        letter-spacing: 0.01em;
+        text-align: center;
+      }
+      .log {
+        width: 100%;
+      }
+      .req-btn{
+        display: none;
+      }
+      .digi-logo{
+        display: none;
+      }
+
+      /* modal css */
+      #requestBtn {
+        backdrop-filter: blur(4px);
+      }
+      #requestBtn .modal-content {
+        background-color: var(--color-blue_transparent);
+        color: var(--color-white);
+      }
+      #requestBtn .modal-header {
+        background-color: var(--color-blue);
+        color: var(--color-white);
+      }
+      input::placeholder {
+        color: #fff;
+      }
+
+      @media (max-width: 425px) {
+        .share-img {
+          width: 40px;
+        }
+        .log {
+          width: auto !important;
+        }
+       
+        .login-left {
+          display: none;
+        }
+        .body{
+          background-color: #b26ce8;
+        }
+        .req-btn{
+          display: block;
+          width: auto;
+        }
+        .req{
+          display: flex;
+        }
+        .digi-logo{
+          display: block;
+        }
+        .cylsys-logo{
+          display: none;
+        }
+        .card-header{
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- modal start here -->
+    <!-- Button trigger modal -->
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="requestBtn"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header py-0 justify-content-center">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">
+              <img src="assets/images/digi-card.png" alt="" class="w-25" />
+              Request for a demo
+            </h1>
+          </div>
+          <div class="modal-body">
+            <form class="demo_request_form">
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Name</label>
+                <input
+                  type="Text"
+                  class="form-control"
+                  id="name"
+                  aria-describedby="name"
+                  placeholder="Enter name"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="Enter email"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label"
+                  >Phone no.</label
+                >
+                <input
+                  type="Text"
+                  class="form-control"
+                  id="phoneNo"
+                  aria-describedby="phoneNo"
+                  placeholder="Enter Phone no."
+                />
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label"
+                  >Country</label
+                >
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>Select Country</option>
+                  <option value="1">India</option>
+                  <option value="2">U.S</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label"
+                  >Any Specific Requirement</label
+                >
+                <input
+                  type="Text"
+                  class="form-control"
+                  id=""
+                  aria-describedby=""
+                  placeholder="Enter Any Specific Requirement"
+                />
+              </div>
+
+              <div class="mb-3 form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="exampleCheck1"
+                />
+                <label class="form-check-label" for="exampleCheck1"
+                  >I’m not a robot</label
+                >
+              </div>
+              <button
+                type="button"
+                class="btn btn-danger"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="submit" class="btn btn-success">
+                Please Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal end here -->
+
+    <div class="bg_banner">
+      <div class="container">
+        <div class="row login">
+          <div class="col-md-8 login-left">
+            <h1 class="pb-2">
+              <img src="assets/images/digi-card-logo.png" alt="" />
+            </h1>
+            <h2 class="pb-4">
+              Cylsys Digi Card Empower Connections, Simplify Impressions, Your
+              Digital Identity Anytime, Anywhere.
+            </h2>
+            <p class="pb-2">
+              The paperless version of the traditional business card. It is a
+              virtual representation of professional contact information, easily
+              shareable through digital platforms such as smartphones, emails or
+              social media. A convenient and eco-friendly way for individuals to
+              exchange essential information in the digital age. Easy to update
+              and customize, BizConnect Digital reflects the evolving landscape
+              of professional networking and communication.
+            </p>
+            <button
+              type="button"
+              class="btn btn-outline-light requestBtn"
+              data-bs-toggle="modal"
+              data-bs-target="#requestBtn"
+            >
+              Request for a demo
+            </button>
+          </div>
+          <div class="col-md-4">
+            <div class="form_card">
+              <div class="card">
+                <div class="card-header">
+                  <img src="assets/images/logo.svg" class="cylsys-logo" alt="" />
+                  <div class="digi-logo"><img src="assets/images/digi-card-logo.png" alt="" /></div>
+                </div>
+                <div class="card-body">
+                  <form>
+                    <div class="py-4">
+                      <label for="exampleInputEmail1" class="form-label"
+                        >Email</label
+                      >
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="exampleInputEmail1"
+                        aria-describedby="emailHelp"
+                        placeholder="Enter email"
+                      />
+                      <div id="emailHelp" class="form-text">
+                        Please enter a valid User ID
+                      </div>
+                    </div>
+                    <div class="py-4">
+                      <label for="exampleInputPassword1" class="form-label"
+                        >Password</label
+                      >
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="exampleInputPassword1"
+                      />
+                      <div id="passwordHelp" class="form-text">
+                        Please enter a valid Password
+                      </div>
+                    </div>
+                   <div class="req">
+                    <a
+                    href="manage_card.html"
+                    class="btn btn-outline-light loginBtn log"
+                  >
+                    Login
+                  </a> &nbsp;
+                  <button
+                  type="button"
+                  class="btn btn-outline-light requestBtn req-btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#requestBtn"
+                >
+                  Request for a demo
+                </button>
+                   </div>
+                    <div class="forget_password">
+                      <p>
+                        Forget Password?
+                        <a href="registration_form.html">Click here</a>
+                      </p>
+                      <p>Create Account</p>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="row align-items-center">
+              <div class="col-md-8">
+                <ul
+                  class="list-unstyled p-0 d-flex align-items-center justify-content-around m-0"
+                >
+                  <li>
+                    <img src="assets/images/linkedin.svg" alt="" />
+
+                    <img src="assets/images/fb.svg" alt="" class="px-2" />
+
+                    <img src="assets/images/whatsApp.svg" alt="" />
+                    +919967502270
+                  </li>
+                  <li>
+                    <img
+                      src="assets/images/mail.svg"
+                      alt=""
+                    />reachus@cylsys.com
+                  </li>
+                  <li>
+                    <img src="assets/images/mail.svg" alt="" />sales@cylsys.com
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-4">
+                <ul
+                  class="list-unstyled p-0 d-flex align-items-center justify-content-around m-0"
+                >
+                  <li>
+                    <img src="assets/images/14year.svg" alt="" />
+                  </li>
+                  <li>
+                    <img src="assets/images/iso.svg" alt="" />
+                  </li>
+                  <li>
+                    <img src="assets/images/companies.svg" alt="" />
+                  </li>
+                  <li>
+                    <img src="assets/images/iso9001.svg" alt="" />
+                  </li>
+                  <li>
+                    <img src="assets/images/iso27001.svg" alt="" />
+                  </li>
+                  <li>
+                    <img src="assets/images/boss.svg" alt="" />
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
